@@ -1,10 +1,9 @@
 node_modules
-# Keep environment variables out of version control
-.env
-
 dist/
 yarn.lock
-node_modules/
-typescript/**/migrations/
 .vscode/
 dev.db
+javascript/**/migrations/
+typescript/**/migrations/
+misc/**/migrations/
+databases/**/migrations/
