@@ -4,17 +4,23 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts",
-    "prisma": "npx prisma"
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node ./src/index.ts\"",
+    "build": "tsc",
+    "prisma": "npx prisma",
+    "prisma:migrate": "npx prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "^5.15.1",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^20.14.7",
+    "cors": "^2.8.5",
     "express": "^4.19.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "nodemon": "^3.1.4",
     "prisma": "^5.15.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.2"
   }
 }
